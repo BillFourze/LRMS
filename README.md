@@ -99,3 +99,40 @@
 （13）	查看分数：每次上传作业之后，可以看到教师的评语和分数以及期末总的实验分数
 
 （14）	退出登录
+
+## 4.界面展示
+
+### 1）登陆界面
+
+![image.png](https://upload-images.jianshu.io/upload_images/7855203-9d6f7ab5b1e6f5e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 2）个人信息界面
+
+![image.png](https://upload-images.jianshu.io/upload_images/7855203-caca0dafccc61fb1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 3）用户管理界面
+
+![image.png](https://upload-images.jianshu.io/upload_images/7855203-08cbd90e92837a15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](https://upload-images.jianshu.io/upload_images/7855203-52452db43931baad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 4）实验室模块
+
+![image.png](https://upload-images.jianshu.io/upload_images/7855203-0aba620e4db5c020.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://upload-images.jianshu.io/upload_images/7855203-fb6bd48cccdfb1dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 5）排期表
+
+![image.png](https://upload-images.jianshu.io/upload_images/7855203-dec1cb703a9c31d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 6）预约详情界面
+
+![image.png](https://upload-images.jianshu.io/upload_images/7855203-2b89053cf6577173.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 7）个人预约界面
+
+![image.png](https://upload-images.jianshu.io/upload_images/7855203-6a3c2617c943942a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 8）课堂预约界面
+
+![image.png](https://upload-images.jianshu.io/upload_images/7855203-fd2c43710d116262.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
