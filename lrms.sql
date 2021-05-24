@@ -30,9 +30,9 @@ CREATE TABLE `announcement` (
 -- ----------------------------
 -- Records of announcement
 -- ----------------------------
-INSERT INTO `announcement` VALUES ('2', '公告1', '公告1 helloworld ', '2017-03-16 21:21:13');
-INSERT INTO `announcement` VALUES ('3', '2017/3/23公告', null, '2017-03-23 16:16:32');
-INSERT INTO `announcement` VALUES ('4', '2017/2/23 公告2', '2017/2/23 公告2', '2017-03-23 16:17:52');
+INSERT INTO `announcement` VALUES ('2', '公告1', '公告1 helloworld ', '2021-05-24 23:21:13');
+INSERT INTO `announcement` VALUES ('3', '2017/3/23公告', null, '2021-05-25 00:16:32');
+INSERT INTO `announcement` VALUES ('4', '2017/2/23 公告2', '2017/2/23 公告2', '2021-05-25 01:17:52');
 
 -- ----------------------------
 -- Table structure for `class`
@@ -106,37 +106,37 @@ INSERT INTO `course_user` VALUES ('4', '3', 'java编程', '3', '陈红', '0');
 -- ----------------------------
 DROP TABLE IF EXISTS `laboratory`;
 CREATE TABLE `laboratory` (
-  `Lab_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '主键，唯一标识一个实验室',
+  `Lab_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '主键，唯一标识一个图书馆',
   `Building_name` varchar(50) DEFAULT NULL COMMENT '教学楼名字',
-  `Room_number` int(50) DEFAULT NULL COMMENT '房间号',
+  `Room_number` int(50) DEFAULT NULL COMMENT '座位号',
   `Person_number` int(10) DEFAULT NULL COMMENT '可容纳人数',
   `Is_free` int(10) DEFAULT NULL COMMENT '0-空闲，1-已被预约（暂时不需要）',
-  `Description` varchar(500) DEFAULT NULL COMMENT '实验室信息描述',
+  `Description` varchar(500) DEFAULT NULL COMMENT '图书馆信息描述',
   PRIMARY KEY (`Lab_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of laboratory
 -- ----------------------------
-INSERT INTO `laboratory` VALUES ('1', '文波', '101', '50', '0', '文波实验室，现有计算机50台，全部正常运行。');
-INSERT INTO `laboratory` VALUES ('17', '文波', '102', '50', '0', '文波102，共50个位置。');
-INSERT INTO `laboratory` VALUES ('18', '文波', '103', '30', '0', '文波103');
-INSERT INTO `laboratory` VALUES ('19', '文波', '217', '70', '0', '文波217，共70个位置，可供大课堂使用。');
-INSERT INTO `laboratory` VALUES ('20', '文波', '219', '70', '0', '');
+INSERT INTO `laboratory` VALUES ('1', '图书馆', '101', '50', '0', '图书馆，现有座位50处，全部正常空余。');
+INSERT INTO `laboratory` VALUES ('17', '图书馆', '102', '50', '0', '102，共50个位置。');
+INSERT INTO `laboratory` VALUES ('18', '图书馆', '103', '30', '0', '图书馆103');
+INSERT INTO `laboratory` VALUES ('19', '图书馆', '217', '70', '0', '图书馆217，共70个位置，可供使用。');
+INSERT INTO `laboratory` VALUES ('20', '图书馆', '219', '70', '0', '');
 
 -- ----------------------------
 -- Table structure for `reservation`
 -- ----------------------------
 DROP TABLE IF EXISTS `reservation`;
 CREATE TABLE `reservation` (
-  `Reserve_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '实验室预约表的主键',
-  `Lab_id` int(10) DEFAULT NULL COMMENT '实验室id',
+  `Reserve_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自习室预约表的主键',
+  `Lab_id` int(10) DEFAULT NULL COMMENT '自习室id',
   `User_id` int(10) DEFAULT NULL COMMENT '预约人id',
-  `Reserve_type` int(10) DEFAULT NULL COMMENT '预约类型 1—个人预约;2—为指定课堂预约',
-  `Course_id` int(10) DEFAULT NULL COMMENT '0代表没有选择课堂',
+  `Reserve_type` int(10) DEFAULT NULL COMMENT '预约类型 1—个人预约;2—为指定时间预约',
+  `Course_id` int(10) DEFAULT NULL COMMENT '0代表没有选择时间',
   `CourseName` varchar(50) DEFAULT NULL,
   `Reserve_date` date DEFAULT NULL COMMENT '预约日期',
-  `Time_interval` int(10) DEFAULT NULL COMMENT '预约时间段\r\n1--8:00~10:00\r\n2—10:00~12:00\r\n3—14:00~16:00\r\n4—16:00~18:00\r\n5—19:00~21:00',
+  `Time_interval` int(10) DEFAULT NULL COMMENT '预约时间段\r\n1--8:00~10:00\r\n2—07:30~12:30\r\n3—14:00~16:00\r\n4—16:00~18:00\r\n5—19:00~21:30',
   `Weekday` int(10) DEFAULT NULL COMMENT '表示星期几，取值为1,2,3,4,5,6,7\r\n1--周一、2—周二\r\n3--周三、4—周四\r\n5--周五、6—周六\r\n7--周日',
   `Person_number` int(10) DEFAULT NULL COMMENT '预约人数，1-学生预约，n-教师预约或者教师指定;预约人数应该小于实验室当前可容纳人数',
   `Description` varchar(500) DEFAULT NULL COMMENT '预约描述',
